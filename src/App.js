@@ -79,7 +79,6 @@ function App() {
                 <Card.Img variant="top" src={Burrito}  />
                 <Card.Body>
                   <Card.Title>Card title</Card.Title>
-                  
                 </Card.Body>
                 <Card.Footer>
                 <small className="text-muted"><img src={star} className="starIcon"/><b>4.5</b> Creperies Sandwich</small>
@@ -124,8 +123,8 @@ function App() {
                       </div>
 
                       <div id="right">
-                        <div id="links">Edit <br/><br/>
-                        Choose time</div>
+                        <div><a id="links" href=""><b>Edit </b></a><br/><br/>
+                        <a id="links" href=""><b>Choose time</b></a></div>
                       </div>
                     </div> 
                     <div className="carproducts">
