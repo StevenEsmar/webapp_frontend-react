@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar,InputGroup,Row,Col,Nav, Button, ButtonGroup,Form,FormControl,CardGroup, Container, Card} from 'react-bootstrap';
+import {Navbar,InputGroup,Row,Col,Nav,Button, ButtonGroup,Form,FormControl,CardGroup, Container, Card, CardDeck} from 'react-bootstrap';
 import searchIcon from './assets/icons/search.svg';
 import promoimg from './assets/images/headerimage.png';
 import hamburguer from './assets/icons/hamburguerColor.svg';
@@ -11,6 +11,7 @@ import burguer from './assets/images/burguer.jpeg';
 import party from './assets/images/d.png';
 import emoticon from './assets/icons/emoji.png';
 import Burrito from './assets/images/burrito.jpeg';
+import iconCategorie from './assets/icons/pizza.svg';
 import './App.css';
 import categories from './categories.json';
 import products from './products.json';
@@ -50,11 +51,30 @@ function App() {
 
             <div className="restaurants">
                     Restaurants <img src={hamburguer} className="hamburguer"/>
-                    <button className="joinbutton"><img src={watch} className="iconwatch"/> Delivery: Now <img src={arrowDown} className="arrowdown"/> </button>
+                    <button className="joinbutton"><img src={watch} className="iconwatch"/> Delivery: <b>Now</b> <img src={arrowDown} className="arrowdown"/> </button>
+            </div>
+            <div className="categories">
+              <label className="categorie">
+                <label className="circle">
+                  < img src={iconCategorie} className="iconCat"/> 
+                </label>
+                asdasd
+              </label>
+              <label className="categoriem">
+                <label className="circle">
+                  < img src={iconCategorie} className="iconCat"/> 
+                </label>
+                pizza
+              </label>
+              <label className="categoriem">
+                <label className="circle">
+                  < img src={iconCategorie} className="iconCat"/> 
+                </label>
+                burguer
+              </label>
             </div>
 
-
-            <CardGroup>
+            <CardDeck>
               <Card>
                 <Card.Img variant="top" src={Burrito}  />
                 <Card.Body>
@@ -62,7 +82,7 @@ function App() {
                   
                 </Card.Body>
                 <Card.Footer>
-                <small className="text-muted"><img src={star} className="starIcon"/>4.5 Creperies Sandwich</small>
+                <small className="text-muted"><img src={star} className="starIcon"/><b>4.5</b> Creperies Sandwich</small>
                 </Card.Footer>
               </Card>
               <Card>
@@ -72,7 +92,7 @@ function App() {
                   
                 </Card.Body>
                 <Card.Footer>
-                <small className="text-muted"><img src={star} className="starIcon"/>4.5 Creperies Sandwich</small>
+                <small className="text-muted"><img src={star} className="starIcon"/><b>4.5</b> Creperies Sandwich</small>
                 </Card.Footer>
               </Card>
               <Card>
@@ -82,10 +102,10 @@ function App() {
                   
                 </Card.Body>
                 <Card.Footer>
-                  <small className="text-muted"><img src={star} className="starIcon"/>4.5 Creperies Sandwich</small>
+                  <small className="text-muted"><img src={star} className="starIcon"/><b>4.5</b> Creperies Sandwich</small>
                 </Card.Footer>
               </Card>
-            </CardGroup>
+            </CardDeck>
 
               
           </div>  
