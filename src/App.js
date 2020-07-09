@@ -1,26 +1,95 @@
 import React from 'react';
-import {Navbar,Nav, Button, ButtonGroup,Form,FormControl, Container, Card} from 'react-bootstrap';
+import {Navbar,InputGroup,Row,Col,Nav, Button, ButtonGroup,Form,FormControl,CardGroup, Container, Card} from 'react-bootstrap';
 import searchIcon from './assets/icons/search.svg';
 import promoimg from './assets/images/headerimage.png';
 import hamburguer from './assets/icons/hamburguerColor.svg';
 import watch from './assets/icons/watch.svg';
 import arrowDown from './assets/icons/rightDirection.svg';
 import person from './assets/icons/person.svg';
+import star from './assets/icons/star.svg';
 import burguer from './assets/images/burguer.jpeg';
 import party from './assets/images/d.png';
 import emoticon from './assets/icons/emoji.png';
+import Burrito from './assets/images/burrito.jpeg';
 import './App.css';
-import categories from './categories.json'
-import products from './products.json'
+import categories from './categories.json';
+import products from './products.json';
+import "bootstrap/dist/css/bootstrap.min.css";
+import SumPersons from './SumPersons';
 
 function App() {
   return (
     
      
     <div id="contenedor">
-          <div id="mainpage"> 
+        <div id="mainpage">
+
+          <div id="marginMain">          
+              <Form.Group as={Row} controlId="formPlaintextPassword">
+                <Form.Label column sm="4">
+                  <h6 id="nameCompany">= Chukwudi</h6>
+                </Form.Label>
+                <Col xs="8">
+                  <InputGroup className="mb-2">
+                    <InputGroup.Prepend>
+                      <InputGroup.Text><img src={searchIcon} className="icon"/></InputGroup.Text>
+                    </InputGroup.Prepend>
+                    <FormControl id="inlineFormInputGroup" placeholder="Search" />
+                  </InputGroup>
+                </Col>
+              </Form.Group>
+
             
-          </div>
+            <div className="promo">
+
+              <img src={promoimg} className="headerImg"/> 
+              <a>$0 delivery for 30 days! <img src={party} className="partyIcon" /> 
+              </a> 
+
+            </div>
+
+            <div className="restaurants">
+                    Restaurants <img src={hamburguer} className="hamburguer"/>
+                    <button className="joinbutton"><img src={watch} className="iconwatch"/> Delivery: Now <img src={arrowDown} className="arrowdown"/> </button>
+            </div>
+
+
+            <CardGroup>
+              <Card>
+                <Card.Img variant="top" src={Burrito}  />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  
+                </Card.Body>
+                <Card.Footer>
+                <small className="text-muted"><img src={star} className="starIcon"/>4.5 Creperies Sandwich</small>
+                </Card.Footer>
+              </Card>
+              <Card>
+                <Card.Img variant="top" src={Burrito} />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  
+                </Card.Body>
+                <Card.Footer>
+                <small className="text-muted"><img src={star} className="starIcon"/>4.5 Creperies Sandwich</small>
+                </Card.Footer>
+              </Card>
+              <Card>
+                <Card.Img variant="top" src={Burrito}  />
+                <Card.Body>
+                  <Card.Title>Card title</Card.Title>
+                  
+                </Card.Body>
+                <Card.Footer>
+                  <small className="text-muted"><img src={star} className="starIcon"/>4.5 Creperies Sandwich</small>
+                </Card.Footer>
+              </Card>
+            </CardGroup>
+
+              
+          </div>  
+        </div>
           
           <div id="orders"> 
             <div id="marginorders">
@@ -61,12 +130,17 @@ function App() {
                       <h2>Total: suma</h2>
                       <hr />  
                     </div>
-
-                    <ButtonGroup className="mr-2" aria-label="Second group">
-                      <Button>5</Button> <Button>6</Button> <Button>7</Button>
-                    </ButtonGroup>    
-            </div>   
+                    <label className="selectnumber">
+                      <ButtonGroup className="mr-2" aria-label="Second group">
+                        <Button variant="light">-</Button> <label>num</label> <Button variant="light" >+</Button>
+                      </ButtonGroup>
+                    </label>
+                    
+                    
+            </div>
+            
           </div>
+          
     </div>
       
   );
