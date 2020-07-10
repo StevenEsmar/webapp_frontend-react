@@ -3,32 +3,28 @@ import {Navbar,InputGroup,Row,Col,Nav,Button, ButtonGroup,Form,FormControl,CardG
 import iconCategorie from '../assets/icons/pizza.svg';
 import './style.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import datacategories from '../data/categories.json';
 
+const categori = datacategories.map((datacategories) => {
 
-function Categories() {
-    
+  
     return(
         <div className="categories">
-        <label className="categorie">
+         
+        <label key={datacategories.id} className="categoriem">
           <label className="circle">
-            < img src={iconCategorie} className="iconCat"/> 
+            < img src={datacategories.icon} className="iconCat"/> 
           </label>
-          asdasd
+          {datacategories.name}
         </label>
-        <label className="categoriem">
-          <label className="circle">
-            < img src={iconCategorie} className="iconCat"/> 
-          </label>
-          pizza
-        </label>
-        <label className="categoriem">
-          <label className="circle">
-            < img src={iconCategorie} className="iconCat"/> 
-          </label>
-          burguer
-        </label>
+        
       </div>
     )
+  }
+)
+
+function Categories() {
+  return categori
 }
 
 export default Categories;

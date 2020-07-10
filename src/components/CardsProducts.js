@@ -4,43 +4,33 @@ import star from '../assets/icons/star.svg';
 import Burrito from '../assets/images/burrito.jpeg';
 import './style.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import dataproducts from './products.json';
 
+const products = dataproducts.map((dataproducts) => {
+  
+  return(
+    <CardDeck>
+                
+      <Card key ={dataproducts.id} >
+        <Card.Img variant="top" src={dataproducts.image} />
+        <Card.Body >
+          <Card.Title class="sizet">{dataproducts.name}</Card.Title>
+          <a class="pricePr">Price: ${dataproducts.price}</a>
+        </Card.Body>
+        <Card.Footer>
+        <small className="text-muted"><img src={star} className="starIcon"/><b>{dataproducts.qualification}</b></small>
+        </Card.Footer>
+      </Card>
+
+    </CardDeck>  
+    
+  )
+}
+)
 
 function CardsProducts() {
-    
-    return(
-        <CardDeck>
-              <Card>
-                <Card.Img variant="top" src={Burrito}  />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                </Card.Body>
-                <Card.Footer>
-                <small className="text-muted"><img src={star} className="starIcon"/><b>4.5</b> Creperies Sandwich</small>
-                </Card.Footer>
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={Burrito} />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  
-                </Card.Body>
-                <Card.Footer>
-                <small className="text-muted"><img src={star} className="starIcon"/><b>4.5</b> Creperies Sandwich</small>
-                </Card.Footer>
-              </Card>
-              <Card>
-                <Card.Img variant="top" src={Burrito}  />
-                <Card.Body>
-                  <Card.Title>Card title</Card.Title>
-                  
-                </Card.Body>
-                <Card.Footer>
-                  <small className="text-muted"><img src={star} className="starIcon"/><b>4.5</b> Creperies Sandwich</small>
-                </Card.Footer>
-              </Card>
-            </CardDeck>
-    )
+  return products
+  
 }
 
 export default CardsProducts;

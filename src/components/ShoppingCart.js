@@ -1,6 +1,7 @@
 import React from 'react';
 import {Navbar,InputGroup,Row,Col,Nav,Button, ButtonGroup,Form,FormControl,CardGroup, Container, Card, CardDeck} from 'react-bootstrap';
 import person from '../assets/icons/person.svg';
+import arrow from '../assets/icons/right.svg';
 import burguer from '../assets/images/burguer.jpeg';
 import './style.css';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -50,9 +51,10 @@ function ShoppingCart() {
                     </div>
                     <label className="selectnumber">
                       <ButtonGroup className="mr-2" aria-label="Second group">
-                        <Button variant="light">-</Button> <label>num</label> <Button variant="light" >+</Button>
+                        <Button variant="light">-</Button> <label>1</label> <Button variant="light" >+</Button>
                       </ButtonGroup>
                     </label>
+                    <button className="buybutton">Checkout <img src={arrow} className="iconArrow"/></button>
                     
                     
             </div>
