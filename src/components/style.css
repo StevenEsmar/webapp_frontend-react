@@ -97,9 +97,10 @@
   }
   
   .productphoto{
-    width: 50%;
-    border-radius: 5px;
+    width: 40%;
+    border-radius: 18px;
     margin-top: 7px;
+    margin-right: 12px;
     
   }
   
@@ -109,6 +110,10 @@
     margin-top: 35px;
   }
   
+  h5{
+    font-size: 2.4vh;
+    
+  }
   .icon{
     width: 20px;
     position: relative;
@@ -302,7 +307,10 @@
   @media only screen and (max-width: 700px) {
 
     .iconwatch {display: none;}
-    .productphoto{width: 100%;}
+    .productphoto{width: 100%;padding-bottom: 6px;}
+    h5{
+      text-align: center;
+    }
     #cardtime{width: 100%;}
     .personIcon{width: 16px;margin-left: 0;padding-bottom: 5px;}
     #right {text-align: left ;}

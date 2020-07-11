@@ -8,8 +8,28 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import LoginNav from './LoginNav';
 
 
-function ShoppingCart() {
-    
+class ShoppingCart extends React.Component {
+    constructor(){
+      super();
+      this.state ={
+        cart:[
+          {
+            id:14,
+            name: "BBQBurguer",
+            price: "$14.99",
+            photo: "https://www.thechunkychef.com/wp-content/uploads/2015/09/Dr-Pepper-BBQ-Burgers-8.jpg"
+          },
+          {
+            id:15,
+            name: "Frendh fries",
+            price: "$9.99",
+            photo: "https://www.cocinavital.mx/wp-content/uploads/2019/08/como-hacer-papas-fritas-crujientes-caseras.jpg"
+          }
+        ]
+      }
+    }
+
+    render(){
     return(
         <div id="orders">
           <LoginNav></LoginNav> 
@@ -31,21 +51,19 @@ function ShoppingCart() {
                     </div> 
                     <div className="carproducts">
                         <div>
-                          <img src={burguer} className="productphoto"/>
-
-                        </div>
-                        <div>
-                          <img src={burguer} className="productphoto"/>
-
-                        </div>
-                        <div>
-                          <img src={burguer} className="productphoto"/>
                           
+                          {
+                            this.state.cart.map(c => <li><h5>
+                            <img src={c.photo} className="productphoto"/>
+                            1 x 
+                            {c.name}   
+                            {c.price}
+                            </h5>
+                             </li>)
+                          
+                          }
                         </div>
-                        <div>
-                          <img src={burguer} className="productphoto"/>
-
-                        </div>
+                        
                     </div>
                     <div>
                       <h2 id="sum">Total: suma</h2>
@@ -64,6 +82,7 @@ function ShoppingCart() {
             
           </div>
     )
+  }
 }
 
 export default ShoppingCart;
