@@ -18,7 +18,8 @@ const products = dataproducts.map((dataproducts) => {
           <a class="pricePr">Price: ${dataproducts.price}</a>
         </Card.Body>
         <Card.Footer>
-        <small className="text-muted"><img src={star} className="starIcon"/><b>{dataproducts.qualification}</b></small>
+        <small className="text-muted"><img src={star} className="starIcon"/><b class="qualification">{dataproducts.qualification}</b></small>
+        <Button variant="warning" className="float-right">Add to cart</Button>
         </Card.Footer>
       </Card>
 

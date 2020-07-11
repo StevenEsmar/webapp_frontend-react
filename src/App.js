@@ -15,15 +15,15 @@ function App() {
       <div id="mainpage">
         <div id="marginMain">          
               
-          <Search></Search>
-          <Promo></Promo>
-          <Restaurants></Restaurants>
-          <Categories></Categories>
-          <CardsProducts></CardsProducts>
+          <Search/>
+          <Promo/>
+          <Restaurants/>
+          <Categories/>
+          <CardsProducts/>
             
         </div>  
       </div>
-        <ShoppingCart></ShoppingCart>
+        <ShoppingCart/>
     </div>
    );
 }

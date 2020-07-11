@@ -33,7 +33,7 @@
     background-color: #6f34dd;
     border-radius: 15px;
     padding-top: 10%;
-    font-size: 11px;
+    font-size: 2vh;
   } 
   
   #left { 
@@ -62,7 +62,7 @@
     margin-top: 35px;
     justify-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 18px;
+    font-size: 3vh;
     font-weight: 800;
     
   }
@@ -97,7 +97,7 @@
   }
   
   .productphoto{
-    width: 30%;
+    width: 50%;
     border-radius: 5px;
     margin-top: 7px;
     
@@ -281,4 +281,30 @@
   }
   .logbar{
     width: 100%;
+  }
+  .buttonadd{
+    float: right;
+  }
+
+  .fontpromo{
+    font-size: 2.2vw;
+  }
+  
+  h2{
+    font-size: 3vh;
+    text-align: center;
+  }
+  .selectnumber{
+    float: left;
+  }
+
+
+  @media only screen and (max-width: 700px) {
+
+    .iconwatch {display: none;}
+    .productphoto{width: 100%;}
+    #cardtime{width: 100%;}
+    .personIcon{width: 16px;margin-left: 0;padding-bottom: 5px;}
+    #right {text-align: left ;}
+    
   }

@@ -16,7 +16,7 @@ function ShoppingCart() {
             <div id="marginorders">
                   <div className="cartshop">
                   <img src={person} className="personIcon"/> <button className="counter">3</button>
-                  <p>My 😎 <br/> Order</p>
+                  <p id="ordertext">My 😎  Order</p>
                   </div>
                     <div id="cardtime">
                       <div id="left">
@@ -40,7 +40,7 @@ function ShoppingCart() {
                         </div>
                         <div>
                           <img src={burguer} className="productphoto"/>
-
+                          
                         </div>
                         <div>
                           <img src={burguer} className="productphoto"/>
@@ -48,15 +48,16 @@ function ShoppingCart() {
                         </div>
                     </div>
                     <div>
-                      <h2>Total: suma</h2>
+                      <h2 id="sum">Total: suma</h2>
                       <hr />  
                     </div>
                     <label className="selectnumber">
                       <ButtonGroup className="mr-2" aria-label="Second group">
                         <Button variant="light">-</Button> <label>1</label> <Button variant="light" >+</Button>
                       </ButtonGroup>
+                      Persons
                     </label>
-                    <button className="buybutton">Checkout <img src={arrow} className="iconArrow"/></button>
+                    <Button variant="warning" >Checkout <img src={arrow} className="iconArrow"/></Button>
                     
                     
             </div>

@@ -12,7 +12,7 @@ function Promo() {
         <div className="promo">
 
               <img src={promoimg} className="headerImg"/> 
-              <a>$0 delivery for 30 days! <img src={party} className="partyIcon" /> 
+              <a className="fontpromo">$0 delivery for 30 days! <img src={party} className="partyIcon" /> 
               </a> 
 
             </div>
