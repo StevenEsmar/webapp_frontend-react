@@ -165,12 +165,13 @@
     border: none;
     font-size: 70%;
     color: white;
-    padding: 8px;
+    padding: 2px;
+    text-align: center;
     justify-content: center;
     
   }
   .iconwatch{
-    width: 8%;
+    width: 18px;
     margin-right:19px;
     margin-bottom: 4px;
     filter: invert(100%);
@@ -218,7 +219,7 @@
   }
   
   .categoriem{
-    width: 8%;
+    width: 56px;
     height: 90px;
     background: rgb(255, 255, 255);
     border-radius: 60px;
@@ -273,4 +274,8 @@
     border-radius: 20px;
     border: 0px;
     width: 100px;
+  }
+
+  .buttonsSign{
+    text-align: right;
   }

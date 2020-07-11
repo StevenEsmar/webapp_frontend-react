@@ -5,12 +5,14 @@ import arrow from '../assets/icons/right.svg';
 import burguer from '../assets/images/burguer.jpeg';
 import './style.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import LoginNav from './LoginNav';
 
 
 function ShoppingCart() {
     
     return(
-        <div id="orders"> 
+        <div id="orders">
+          <LoginNav></LoginNav> 
             <div id="marginorders">
                   <div className="cartshop">
                   <img src={person} className="personIcon"/> <button className="counter">3</button>
