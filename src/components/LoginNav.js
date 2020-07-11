@@ -35,12 +35,12 @@ class LoginNav extends React.Component{
     render() {
     return(
         <div>
-            <Navbar bg="dark" variant="dark">
+            <Navbar bg="dark" variant="dark" class="logbar">
                 
                 <Nav className="ml-auto">
-                <Nav.Link href="#">SignIn</Nav.Link>
+                
                 <Nav.Link href="#" onClick={()=> {this.handleModal()}}>SignUp</Nav.Link>
-                <Nav.Link href="#">Logout</Nav.Link>
+                
                 </Nav>
                 
             </Navbar>
